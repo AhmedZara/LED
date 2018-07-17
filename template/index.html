@@ -35,7 +35,7 @@
         methods: {
           onLED:function(){
             console.log("ON was called")
-            axios.post('/pinon', {
+            axios.post('/pin_on', {
             pin:17,
           })
           .then(function (response) {
@@ -44,10 +44,10 @@
         .catch(function (error) {
           console.log(error);
            });
-          }
-           offLED:function(){
+          },
+          offLED: function(){
             console.log("Off was called")
-            axios.post('/pinoff', {
+            axios.post('/pin_off', {
             pin:17,
           })
           .then(function (response) {
@@ -57,6 +57,7 @@
           console.log(error);
            });
           }   
+      }
       })
     </script>
   </body>
