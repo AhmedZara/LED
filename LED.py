@@ -16,7 +16,7 @@ def pin_on():
     if request.method == 'POST':
         body=request.get_json()
         led.on()
-        return jsonify({'status' : 'LED_ON(body['pin'])'})
+        return jsonify({'status' : 'LED_ON(body[])'})
     else:
         return jsonify({'status: unavailable'})
 @app.route('/pin_off', methods=['GET', 'POST'])
@@ -24,7 +24,7 @@ def pin_off():
     if request.method == 'POST':
         body=request.get_json()
         led.off()
-        return jsonify({'status' : 'LED_OFF(body['pin'])'})
+        return jsonify({'status' : 'LED_OFF(body[])'})
     else:
         return jsonify({'status: unavailable'})
 
