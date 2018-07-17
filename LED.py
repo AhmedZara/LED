@@ -1,9 +1,11 @@
+from gpiozero import LED
 from flask import Flask,request,render_template,jsonify
 
-from led_on import LED_ON
-from led_off import LED_OFF
+#from led_on import LED_ON
+#from led_off import LED_OFF
 
 app = Flask(__name__)
+led=LED(18)
 
 @app.route('/',methods=['GET'])
 def index():
@@ -13,14 +15,16 @@ def index():
 def pin_on():
     if request.method == 'POST':
         body=request.get_json()
-        return jsonify({'status' : LED_ON(body['pin'])})
+        led.on()
+        return jsonify({'status' : 'LED_ON(body['pin'])'})
     else:
         return jsonify({'status: unavailable'})
 @app.route('/pin_off', methods=['GET', 'POST'])
 def pin_off():
     if request.method == 'POST':
         body=request.get_json()
-        return jsonify({'status' : LED_OFF(body['pin'])})
+        led.off()
+        return jsonify({'status' : 'LED_OFF(body['pin'])'})
     else:
         return jsonify({'status: unavailable'})
 

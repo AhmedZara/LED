@@ -12,9 +12,9 @@
   </head>
   <body>
     <div class = 'container'>
-      <section id = LED>
-        <button class="btn btn success" v-on : click ="onLED">ON</button>
-        <button class="btn btn danger" v-on : click ="offLED">OFF</button>
+      <section id = "LED">
+        <button class="btn btn-success" v-on:click ="onLED">ON</button>
+        <button class="btn btn-danger" v-on:click ="offLED">OFF</button>
       </section>
     </div>
     <h1>LED</h1>
@@ -27,7 +27,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
-      var ledApp = new vue ({
+      var ledApp = new Vue ({
         el:'#LED',
         data: {
           message:'LED OFF'
@@ -36,7 +36,7 @@
           onLED:function(){
             console.log("ON was called")
             axios.post('/pin_on', {
-            pin:17,
+            pin:18,
           })
           .then(function (response) {
           console.log(response);
@@ -48,7 +48,7 @@
           offLED: function(){
             console.log("Off was called")
             axios.post('/pin_off', {
-            pin:17,
+            pin:18,
           })
           .then(function (response) {
           console.log(response);
