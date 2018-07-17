@@ -12,13 +12,15 @@ def index():
 @app.route('/pin_on', methods=['GET', 'POST'])
 def pin_on():
     if request.method == 'POST':
-        return jsonify({'status' : LED_ON(request.form['pin'])})
+        body=request.get_json()
+        return jsonify({'status' : LED_ON(body['pin'])})
     else:
         return jsonify({'status: unavailable'})
 @app.route('/pin_off', methods=['GET', 'POST'])
 def pin_off():
     if request.method == 'POST':
-       return jsonify({'status' : LED_OFF(request.form['pin'])})
+        body=request.get_json()
+        return jsonify({'status' : LED_OFF(body['pin'])})
     else:
         return jsonify({'status: unavailable'})
 
