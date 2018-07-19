@@ -15,7 +15,7 @@ try:
             p.ChangeDutyCycle(100-i)
             time.sleep(0.02)
 
-except keyboardInterrupt:
+except KeyboardInterrupt:
     pass
 
 p.stop()
