@@ -1,9 +1,6 @@
 from flask import Flask,request,render_template,jsonify
 from gpiozero import LED
-<<<<<<< HEAD
-=======
 
->>>>>>> decee1735bef1c412fae7fe7cc14b107c3987237
 #from led_on import LED_ON
 #from led_off import LED_OFF
 
