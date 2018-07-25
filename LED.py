@@ -20,7 +20,7 @@ def index():
 def pin_on():
     if request.method == 'POST':
         body=request.get_json()
-        for i in range (0,5)
+        for i in range (0,5):
         led1.on()
         time.sleep(1)
         led2.on()
