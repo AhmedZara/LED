@@ -14,7 +14,7 @@
     <div class = 'container'>
       <section id = "LED">
         <button class="btn btn-success" v-on:click ="onLED">ON</button>
-        <button class="btn btn-danger" v-on:click ="offLED">OFF</button>
+        
       </section>
     </div>
     <h1>LED</h1>
@@ -36,7 +36,7 @@
           onLED:function(){
             console.log("ON was called")
             axios.post('/pin_on', {
-            pin:18,
+            led1:14,led2:15,led3:18,led4:2,led5:3,led6:4
           })
           .then(function (response) {
           console.log(response);
@@ -45,18 +45,7 @@
           console.log(error);
            });
           },
-          offLED: function(){
-            console.log("Off was called")
-            axios.post('/pin_off', {
-            pin:18,
-          })
-          .then(function (response) {
-          console.log(response);
-          })
-        .catch(function (error) {
-          console.log(error);
-           });
-          }   
+          
       }
       })
     </script>
