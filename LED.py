@@ -22,30 +22,31 @@ def pin_on():
         body=request.get_json()
         for i in range (0,5):
             led1.on()
-            time.sleep(1)
+            
             led2.on()
-            time.sleep(1)
+            time.sleep(0.5)
+            
             led1.off()
             led2.off()
 
             led3.on()
-            time.sleep(1)
+            
             led4.on()
-            time.sleep(1)
+            time.sleep(0.5)
             led3.off()
             led4.off()
 
             led5.on()
-            time.sleep(1)
+            
             led6.on()
-            time.sleep(1)
+            time.sleep(0.5)
             led5.off()
             led6.off()
 
             led1.on()
             led3.on()
             led5.on()
-            time.sleep(1)
+            time.sleep(0.5)
             led1.off() 
             led3.off()
             led5.off()
@@ -53,7 +54,7 @@ def pin_on():
             led2.on()
             led4.on()
             led6.on()
-            time.sleep(1)
+            time.sleep(0.5)
             led2.off()
             led4.off()
             led6.off()
