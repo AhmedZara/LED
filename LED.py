@@ -46,7 +46,7 @@ def pin_on():
         led3.on()
         led5.on()
         time.sleep(1)
-        led1.off()
+        led1.off() 
         led3.off()
         led5.off()
 
