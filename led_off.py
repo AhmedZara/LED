@@ -56,9 +56,8 @@ def pwmon():
 		body = request.get_json()
 		p=GPIO.PWM(pin,50)
 		p.start(0)
-
 		try:
-    		while true:
+    		while True:
        			for i in range(100):
             		p.ChangeDutyCycle(i)
             		time.sleep(0.02)
