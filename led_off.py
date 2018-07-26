@@ -62,12 +62,11 @@ def pwmon():
 					p.ChangeDutyCycle(i)
             		time.sleep(0.02)
         		for i in range(100):
-            		p.ChangeDutyCycle(100-i)
+        			p.ChangeDutyCycle(100-i)
            			time.sleep(0.02)
-            
-		except keyboardInterrupt:
-			pass
+           	except keyboardInterrupt:
+				pass
 
 		p.stop()
 
-		return jsonify({"status": onLED(body.get('pin'))})
+	return jsonify({"status": onLED(body.get('pin'))})
