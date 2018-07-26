@@ -57,8 +57,8 @@ def pwmon():
 		p=GPIO.PWM(pin,50)
 		p.start(0)
 		try:
-    		while True:
-       			for i in range(100):
+			while True:
+				for i in range(100):
             		p.ChangeDutyCycle(i)
             		time.sleep(0.02)
         		for i in range(100):
@@ -66,7 +66,7 @@ def pwmon():
            			time.sleep(0.02)
             
 		except keyboardInterrupt:
-     	pass
+			pass
 
 		p.stop()
 
