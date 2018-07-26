@@ -65,7 +65,7 @@ def pwmon():
         			p.ChangeDutyCycle(100-i)
            			time.sleep(0.02)
            	except keyboardInterrupt:
-				pass
+				pass 
 
 		p.stop()
 
