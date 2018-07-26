@@ -7,16 +7,16 @@ p=GPIO.PWM(7,50)
 p.start(0)
 
 try:
-    while True:
+    while true:
         for i in range(100):
             p.ChangeDutyCycle(i)
             time.sleep(0.02)
         for i in range(100):
             p.ChangeDutyCycle(100-i)
             time.sleep(0.02)
-
-except KeyboardInterrupt:
-    pass
+            
+except keyboardInterrupt:
+     pass
 
 p.stop()
 GPIO.cleanup()
