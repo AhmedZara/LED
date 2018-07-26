@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify, render_template, url_for
-# import RPi.GPIO as GPIO
+import RPi.GPIO as GPIO
 
 app = Flask(__name__)
 GPIO.setmode(GPIO.BCM)
