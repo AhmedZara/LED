@@ -46,7 +46,7 @@
             console.log('On was called');
             axios.post('/pwmon', {pin:obj})
               .then(function (response) {
-                console.log(response);
+                console.log(response.data);
               })
               .catch(function (error) {
                 console.log(error);
