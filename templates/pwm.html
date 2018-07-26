@@ -34,7 +34,7 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
     <script type="text/javascript" src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="{{url_for('static', filename='js/led.js')}}"></script>
+    
     <script>
       var app = new Vue({
         el: '#app',
@@ -43,7 +43,7 @@
         },
         methods: {
           onLed: function (obj) {
-            console.log(obj.pin);
+            console.log('On was called');
             axios.post('/pwmon', {pin:obj})
               .then(function (response) {
                 console.log(response);
